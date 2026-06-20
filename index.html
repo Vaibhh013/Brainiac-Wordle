@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordlecup.io Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="home-screen">
+            <h1 class="logo">Brainiac Wordle</h1>
+            <div class="trophy">🏆</div>
+            
+            <div class="input-row">
+                <input type="text" id="username" class="name-input" placeholder="Choose a name" maxlength="15">
+                <!--<button class="icon-btn">📊</button>
+                <button class="icon-btn" title="Game Settings">⚙️</button>-->
+            </div>
+
+            <div class="action-row">
+                <button class="btn btn-orange" id="play-btn">Play Game</button>
+                <!--<button class="btn btn-green">Create a Room</button>-->
+                <button class="btn btn-grey" id="help-btn">Help</button>
+            </div>
+        </div>
+
+        <div id="game-screen">
+            <div class="game-header">
+                <!--<div>Time left: 01:30</div>-->
+            </div>
+
+            <div class="grid" id="wordle-grid"></div>
+
+            <div class="status-msg" id="status-text">Make your first guess!</div>
+
+            <div class="result-banner" id="result-box">
+                <div id="result-text"></div>
+                <div class="end-game-btns">
+                    <button class="btn btn-green" id="reset-btn">Reset</button>
+                    <button class="btn btn-orange" id="logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <div class="keyboard" id="keyboard"></div>
+        </div>
+
+    </div>
+    <div id="help-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>How to Play</h2>
+        <ul class="help-list">
+            <li>Guess the Wordle in 6 tries.</li>
+            <li>Each guess must be a valid 5-letter word.</li>
+            <li>The color of the tiles will change to show how close your guess was to the word.</li>
+        </ul>
+        <div class="example-row">
+            <span class="tile correct">G</span>
+            <p><strong>Green:</strong> The letter is in the word and in the correct spot.</p>
+        </div>
+        <div class="example-row">
+            <span class="tile present">Y</span>
+            <p><strong>Yellow:</strong> The letter is in the word but in the wrong spot.</p>
+        </div>
+        <div class="example-row">
+            <span class="tile absent">R</span>
+            <p><strong>Grey:</strong> The letter is not in the word in any spot.</p>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</html>
